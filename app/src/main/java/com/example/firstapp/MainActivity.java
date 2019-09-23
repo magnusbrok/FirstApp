@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button enKnap;
+    Button enKnap, enKnap2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,8 +18,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         enKnap = findViewById(R.id.button1);
+        enKnap2 = findViewById(R.id.button2);
 
         enKnap.setOnClickListener(this);
+        enKnap2.setOnClickListener(this);
+
 
     }
 
@@ -28,7 +31,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         long etTal = System.currentTimeMillis();
 
         // Skriv meddelelse på knappen (kan på skærmen)
-        enKnap.setText("Du trykkede på mig. Tak! \n" + etTal);
+        if (v == enKnap) {
+            enKnap.setText("Du trykkede på mig. Tak! \n" + etTal);
+        }
+        if (v == enKnap2){
+            enKnap2.setText("Du trykkede ikke på mig");
+             setContentView(R.layout.fun_screen);
+        }
 
         // Skriv meddelelse til loggen (loggen kan ses med adb logcat)
         System.out.println("Der blev trykket på knappen");
