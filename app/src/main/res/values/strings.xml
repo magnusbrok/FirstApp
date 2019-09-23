@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FirstApp</string>
+    <string name="Greet">Hello and welcome to my first app</string>
+    <string name="Credits">Made by Magnus Brok</string>
 </resources>
