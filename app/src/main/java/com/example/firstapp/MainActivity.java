@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (v == enKnap2){
             enKnap2.setText("Du trykkede ikke på mig");
-             setContentView(R.layout.fun_screen);
+             setContentView(R.layout.activity_fun_screen);
         }
 
         // Skriv meddelelse til loggen (loggen kan ses med adb logcat)
