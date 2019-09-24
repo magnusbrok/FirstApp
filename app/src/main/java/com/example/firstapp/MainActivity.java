@@ -13,7 +13,6 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button enKnap, enKnap2;
-    WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (v == enKnap2){
             enKnap2.setText("Du trykkede ikke på mig");
             openActivity();
+
         }
 
         // Skriv meddelelse til loggen (loggen kan ses med adb logcat)
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void openActivity() {
-        Intent intent = new Intent(this, WebView.class);
+        Intent intent = new Intent(this, FunScreen.class);
         startActivity(intent);
     }
 
