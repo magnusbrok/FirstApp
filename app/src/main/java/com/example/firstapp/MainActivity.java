@@ -2,6 +2,7 @@ package com.example.firstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -37,13 +38,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (v == enKnap2){
             enKnap2.setText("Du trykkede ikke på mig");
-             setContentView(R.layout.activity_fun_screen);
+            openActivity();
         }
 
         // Skriv meddelelse til loggen (loggen kan ses med adb logcat)
         System.out.println("Der blev trykket på knappen");
 
         Log.d("BenytEnKnap", "Knap trykket");
+    }
+
+    public void openActivity() {
+        Intent intent = new Intent(this, WebView.class);
+        startActivity(intent);
     }
 
 }

@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class FunScreen extends AppCompatActivity {
+
     private WebView webView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
