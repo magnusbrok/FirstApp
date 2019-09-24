@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button enKnap, enKnap2;
+    WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +25,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         enKnap.setOnClickListener(this);
         enKnap2.setOnClickListener(this);
-
-
     }
 
     public void onClick(View v) {

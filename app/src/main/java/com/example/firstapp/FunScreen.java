@@ -11,10 +11,16 @@ public class FunScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        WebView webView = new WebView(this);
+        setContentView(R.layout.activity_fun_screen);
+
         webView = (WebView) findViewById(R.id.webView);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("http://javabog.dk");
-        setContentView(webView);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setLoadsImagesAutomatically(true);
+        webView.setScrollBarStyle(webView.SCROLLBARS_INSIDE_OVERLAY);
+        webView.getSettings().setDomStorageEnabled(true);
+
+        webView.loadUrl("http://www.google.com");
+        //setContentView(webView);
     }
 }
