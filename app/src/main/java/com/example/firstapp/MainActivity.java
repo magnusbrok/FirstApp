@@ -33,10 +33,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // Skriv meddelelse på knappen (kan på skærmen)
         if (v == enKnap) {
-            enKnap.setText("Du trykkede på mig. Tak! \n" + etTal);
+            enKnap.setText("Dette er tiden i millisekunder \n" + etTal);
         }
         if (v == enKnap2){
-            enKnap2.setText("Du trykkede ikke på mig");
+            enKnap2.setText("Går til google.com");
             openActivity();
 
         }

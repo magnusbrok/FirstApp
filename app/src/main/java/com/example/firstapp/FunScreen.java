@@ -21,6 +21,7 @@ public class FunScreen extends AppCompatActivity {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
+
         webView.loadUrl("http://google.com");
     }
 }
